@@ -2,6 +2,15 @@
 
 The **Redis Info** package provides detailed monitoring and insights into your Redis database for Laravel applications. It helps track Redis usage, cache performance, and key management, making it an essential tool for **debugging, optimizing, and monitoring Redis-based operations**.  
 
+## **⚠️ Important Notice: Install Redis Before Using This Package**  
+Before using this package, ensure that Redis is installed and running on your server. Without Redis, this package will not function correctly.  
+
+Refer to the official Redis installation guide for setup instructions:  
+🔗 **[Redis System Installation Guide](https://redis.io/docs/getting-started/installation/)**  
+
+🔗 **[Laravel Redis Package Installation Guide](https://packagist.org/packages/predis/predis)**  
+
+
 ## **⚠️ Security Warning**
 This package does not include any built-in security measures and is intended for admin use only. It exposes sensitive redis details which could pose a security risk if accessed by unauthorized users.Ensure that this package is only used in a secure environment and not exposed to public or unauthorized access.  
 

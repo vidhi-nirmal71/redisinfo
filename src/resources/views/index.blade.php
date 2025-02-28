@@ -135,7 +135,7 @@
                                             <tr class="clickable-row key-row" data-key="{{$key['key']}}" data-value="{{ $key['value'] }}">
                                                 <td>
                                                     <span class="key-text" style="display: none">{{ $key['key'] }}</span>
-                                                    <span title="{{ $key['key'] }}">
+                                                    <span title="{{ $key['key'] }}" style="color: #12126f !important;">
                                                         {{ strlen($key['key']) > 60 ? substr($key['key'], 0, 60) . '...' : $key['key'] }}
                                                     </span>
                                                 </td>

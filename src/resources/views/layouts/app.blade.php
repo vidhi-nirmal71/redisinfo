@@ -166,6 +166,11 @@
         -webkit-transform: rotateY(0);
                 transform: rotateY(0);
         }
+
+        .clickable-row {
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
     </style>
 
     <!-- Bootstrap 5 JavaScript Bundle with Popper -->
