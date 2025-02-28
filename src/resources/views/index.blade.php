@@ -98,10 +98,12 @@
                                 <table class="table table-bordered table-hover">
                                     <tbody>
                                         @foreach ($redisDetails['redis_connection'] as $key => $value)
-                                            <tr>
-                                                <th>{{ ucfirst($key) }}</th>
-                                                <td>{{ $value ?: 'N/A' }}</td>
-                                            </tr>
+                                            @if ($key !== 'password') 
+                                                <tr>
+                                                    <th>{{ ucfirst($key) }}</th>
+                                                    <td>{{ $value ?: 'N/A' }}</td>
+                                                </tr>
+                                            @endif
                                         @endforeach
                                     </tbody>
                                 </table>
@@ -122,29 +124,35 @@
                         </div>
                         <div class="card-body">
                             <div class="card-text table-responsive">
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Key</th>
-                                            <th scope="col">Type</th>
-                                            <th scope="col">Size (Bytes)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($redisDetails['keyDetails'] as $index => $key)
-                                            <tr class="clickable-row key-row" data-key="{{$key['key']}}" data-value="{{ $key['value'] }}">
-                                                <td>
-                                                    <span class="key-text" style="display: none">{{ $key['key'] }}</span>
-                                                    <span title="{{ $key['key'] }}" style="color: #12126f !important;">
-                                                        {{ strlen($key['key']) > 60 ? substr($key['key'], 0, 60) . '...' : $key['key'] }}
-                                                    </span>
-                                                </td>
-                                                <td>{{ $key['type'] }}</td>
-                                                <td>{{ $key['size'] }}</td>
+                                @if($redisDetails['keyDetails'])
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Key</th>
+                                                <th scope="col">Type</th>
+                                                <th scope="col">Size (Bytes)</th>
                                             </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                            @foreach ($redisDetails['keyDetails'] as $index => $key)
+                                                <tr class="clickable-row key-row" data-key="{{$key['key']}}" data-value="{{ $key['value'] }}">
+                                                    <td>
+                                                        <span class="key-text" style="display: none">{{ $key['key'] }}</span>
+                                                        <span title="{{ $key['key'] }}" style="color: #12126f !important;">
+                                                            {{ strlen($key['key']) > 60 ? substr($key['key'], 0, 60) . '...' : $key['key'] }}
+                                                        </span>
+                                                    </td>
+                                                    <td>{{ $key['type'] }}</td>
+                                                    <td>{{ $key['size'] }}</td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                @else
+                                    <div style="display: flex; justify-content: center; align-items: center;">
+                                        No Data Found
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>

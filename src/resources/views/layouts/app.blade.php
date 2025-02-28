@@ -20,7 +20,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
         .table-responsive {
-            max-height: 263px;
+            max-height: 222px;
         }
 
 
