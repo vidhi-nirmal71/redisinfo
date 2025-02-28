@@ -14,19 +14,22 @@
         }
     ],
     "keywords": [
-        "chatbot",
+        "redis",
+        "caching",
         "laravel",
-        "ai",
-        "nlp",
-        "bot",
-        "automation",
-        "customer-support",
-        "messenger",
-        "conversation",
-        "assistant",
-        "machine-learning",
-        "support-bot",
-        "php"
+        "php",
+        "performance",
+        "optimization",
+        "monitoring",
+        "cache-driver",
+        "session-driver",
+        "queue-management",
+        "database",
+        "server-monitoring",
+        "redis-insights",
+        "predis",
+        "php-redis",
+        "cache-performance"
     ],
     "require": {
         "php": ">=5.8",
@@ -39,5 +42,5 @@
             ]
         }
     },
-    "version": "1.0.0"
+    "version": "1.0.1"
 }

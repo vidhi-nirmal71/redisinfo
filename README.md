@@ -5,21 +5,24 @@ The **Redis Info** package provides detailed monitoring and insights into your R
 ## **⚠️ Security Warning**
 This package does not include any built-in security measures and is intended for admin use only. It exposes sensitive redis details which could pose a security risk if accessed by unauthorized users.Ensure that this package is only used in a secure environment and not exposed to public or unauthorized access.  
 
-🏷️  
-[#Redis](https://packagist.org/search/?tags=redis)  
-[#Caching](https://packagist.org/search/?tags=caching)  
-[#Laravel](https://packagist.org/search/?tags=laravel)  
-[#PHP](https://packagist.org/search/?tags=php)  
-[#Performance](https://packagist.org/search/?tags=performance)  
-[#Optimization](https://packagist.org/search/?tags=optimization)  
-[#Monitoring](https://packagist.org/search/?tags=monitoring)  
+<p>🏷️  
+<a href="https://packagist.org/search/?tags=redis" target="_blank" rel="noopener noreferrer">#Redis</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=caching" target="_blank" rel="noopener noreferrer">#Caching</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=laravel" target="_blank" rel="noopener noreferrer">#Laravel</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=php" target="_blank" rel="noopener noreferrer">#PHP</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=performance" target="_blank" rel="noopener noreferrer">#Performance</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=optimization" target="_blank" rel="noopener noreferrer">#Optimization</a>&nbsp;  
+<a href="https://packagist.org/search/?tags=monitoring" target="_blank" rel="noopener noreferrer">#Monitoring</a>  
+</p>  
 
 ## Documentation  
 - [Features](#features)  
 - [Supported Versions](#supported-versions)  
 - [Installation](#installation)  
-- [Environment Configuration](#environment-configuration)  
-- [Using Redis Info](#using-redis-info)  
+- [Commands](#commands)
+        - [Vendor Publish](#vendor-publish)
+        - [Environment Configuration](#environment-configuration)  
+        - [Accessing the Plugin](#accessing-the-plugin)
 - [FAQs](#faqs)  
 - [Contributing](#contributing)  
 - [Security Vulnerabilities](#security-vulnerabilities)  
@@ -45,7 +48,12 @@ This package does not include any built-in security measures and is intended for
 To install the package, open the terminal and run the following command:  
 ```bash
 composer require itpathsolutions/redisinfo
-```  
+```    
+
+### **Vendor Publish**  
+Run the following command to publish the vendor files:  
+<pre><code class="language-bash">php artisan vendor:publish --provider="Itpathsolutions\RedisInfo\RedisServiceProvider"</code></pre>   
+
 
 ## **Environment Configuration**  
 After installing, add the following settings to your `.env` file:  
@@ -65,7 +73,7 @@ Once done, clear the cache to apply changes:
 php artisan config:clear
 ```  
 
-## **Using Redis Info**  
+## **Accessing the Plugin**  
 Once installed, you can use the following route to access Redis insights:  
 ```bash
 localhost:8000/redis-info
