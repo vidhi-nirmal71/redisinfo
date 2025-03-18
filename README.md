@@ -142,4 +142,5 @@ composer test
 - [MySQL Info Package 🚀](https://packagist.org/packages/itpathsolutions/mysqlinfo)  
 - [PHP Info Package 🚀](https://packagist.org/packages/itpathsolutions/phpinfo)  
 - [Role Wise Session Manager Package 🚀](https://packagist.org/packages/itpathsolutions/role-wise-session-manager)  
-- [Authinfo - User Login Tracker 🚀](https://packagist.org/packages/itpathsolutions/authinfo)  
+- [Authinfo - User Login Tracker 🚀](https://packagist.org/packages/itpathsolutions/authinfo)   
+- [Chatbot Package 🚀](https://packagist.org/packages/itpathsolutions/chatbot)   
